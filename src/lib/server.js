@@ -28,7 +28,7 @@ app.all('*', (req, res) => {
 app.use(require('./error-middleware'));
 
 
-//TURN ON SERVER-----------------------------------------
+//TURN ON SERVER----------------------------------------- need to require in root server.js
 export const start = () => {
   app.listen(PORT, () => {
     console.log(`Listening on port: ${PORT}`);
