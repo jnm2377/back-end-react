@@ -1,0 +1,33 @@
+{
+  "name": "backend-react-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jnm2377/back-end-react.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jnm2377/back-end-react/issues"
+  },
+  "homepage": "https://github.com/jnm2377/back-end-react#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "cors": "^2.8.4",
+    "dotenv": "^6.0.0",
+    "express": "^4.16.3",
+    "http-errors": "^1.6.3",
+    "mongoose": "^5.2.4",
+    "superagent": "^3.8.3"
+  },
+  "devDependencies": {
+    "eslint": "^5.1.0",
+    "jest": "^23.4.1"
+  }
+}
