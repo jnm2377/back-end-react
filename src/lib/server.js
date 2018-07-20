@@ -27,7 +27,7 @@ db.on( 'disconnected', () => console.log( 'Mongo Disconnected' ));
 app.use(bodyParser.json());
 app.use(cors());
 app.use(morgan('dev'));
-// app.use(require('../route/auth-router'));
+// app.use(require('../routes/auth-router'));
 //error middleware
 // app.use(require('./error-middleware'));
 

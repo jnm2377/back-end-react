@@ -1,14 +1,16 @@
 'use strict'
 
-import {Router} from 'express';
-import bodyParser from 'body-parser';
-import basicAuth from '../lib/basic-auth-middleware.js';
-import User from '../models/user.js';
-
-const authRouter = module.exports = new Router();
+const express    = require('express');
+const bodyParser = require('body-parser');
+// import basicAuth from '../lib/basic-auth-middleware.js';
+// import User from '../models/user.js';
+const app        = express();
+const router = express.Router();
+app.use('../lib/basic-auth-middleware.js', basicAuth);
+app.use('../models/user.js', User);
 
 //REGISTERING
-authRouter.post('/api/signup', jsonParser, (req, res, next) => {
+router.post('/api/signup', jsonParser, (req, res, next) => {
   console.log('hit /api/signup');
 
   User.create(req.body)
@@ -17,7 +19,7 @@ authRouter.post('/api/signup', jsonParser, (req, res, next) => {
 });
 
 //LOGING IN
-authRouter.get('/api/login', basicAuth, (req, res, next) => {
+router.get('/api/login', basicAuth, (req, res, next) => {
   console.log('hit /api/login');
 
   req.user.tokenCreate()
